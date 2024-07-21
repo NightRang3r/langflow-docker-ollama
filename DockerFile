@@ -1,5 +1,7 @@
-# Use the official Python 3.12 image from the Docker Hub
+# docker build -f DockerFile . -t nightrang3r/langflow:latest
 # docker run -d --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow langflow:latest
+
+
 FROM python:3.11.9-slim
 
 # Set the working directory in the container
