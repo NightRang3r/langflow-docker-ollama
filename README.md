@@ -3,7 +3,7 @@ Langflow Docker Image
 
 ```docker build -f DockerFile . -t nightrang3r/langflow:1.0.10```
 
-```docker run -d --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow nightrang3r/langflow:1.0.10```
+```docker run -d --restart always --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow nightrang3r/langflow:1.0.10```
 
 Set Ollama Base url TO:
 
