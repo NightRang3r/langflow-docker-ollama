@@ -1,21 +1,10 @@
 # docker build -f DockerFile . -t nightrang3r/langflow:latest
 # docker run -d --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow langflow:latest
 
-
 FROM python:3.11.9-slim
-
-# Set the working directory in the container
-
-# Update the package list and install dependencies
 RUN apt-get update 
-
-
-# Install any needed packages specified in requirements.txt
 RUN pip install langflow
-
 ENV LANGFLOW_HOST=0.0.0.0
-# Make port 7860 available to the world outside this container
 EXPOSE 7860
-
 # Run langflow when the container launches
 CMD ["langflow", "run"]
