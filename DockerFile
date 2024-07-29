@@ -1,5 +1,5 @@
-# docker build -f DockerFile . -t nightrang3r/langflow:1.0.10
-# docker run -d --restart always --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow nightrang3r/langflow:1.0.10
+# docker build -f DockerFile . -t nightrang3r/langflow:1.0.13
+# docker run -d --restart always --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow nightrang3r/langflow:1.0.13
 # docker run -d --restart always -p 6379:6379 -p 8001:8001 --name redis redis/redis-stack:latest
 
 FROM python:3.12.4-slim
