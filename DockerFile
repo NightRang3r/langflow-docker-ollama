@@ -1,11 +1,11 @@
-# docker build -f DockerFile . -t nightranger/langflow:1.0.13
-# docker run -d --restart always --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow nightranger/langflow:1.0.13
+# docker build -f DockerFile . -t nightranger/langflow:latest
+# docker run -d --restart always --add-host=host.docker.internal:host-gateway -p 7860:7860 -it --name langflow nightranger/langflow:latest
 # docker run -d --restart always -p 6379:6379 -p 8001:8001 --name redis redis/redis-stack:latest
 
 FROM python:3.12.4-slim
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential net-tools git nano wget curl iputils-ping
 RUN pip install --upgrade pip
-RUN pip install langflow==1.0.13
+RUN pip install langflow
 RUN pip install redis
 ENV LANGFLOW_HOST=0.0.0.0
 ENV DO_NOT_TRACK=true
